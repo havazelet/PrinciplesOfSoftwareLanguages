@@ -1,0 +1,67 @@
+
+class Car {
+
+    field Square square1;
+    field Square square2;
+    field Square square3;
+    field Square square4;
+    field Square square5;
+
+
+    constructor Car new() {
+        
+        let square1 = Square.new(460, 120, 50);
+        let square2 = Square.new(465, 110, 10);
+        let square3 = Square.new(495, 110, 10);
+        let square4 = Square.new(465, 170, 10);
+        let square5 = Square.new(495, 170, 10);
+        
+        return this;
+     }
+
+
+     method void moveUp(){
+        do square1.moveUp();
+        do square2.moveUp();
+        do square3.moveUp();
+        do square4.moveUp();
+        do square5.moveUp();
+        return;
+     }
+
+     method void moveDown(){
+        do square1.moveDown();
+        do square2.moveDown();
+        do square3.moveDown();
+        do square4.moveDown();
+        do square5.moveDown();
+        return;
+     }
+
+     method void moveLeft(){
+        do square1.moveLeft();
+        do square2.moveLeft();
+        do square3.moveLeft();
+        do square4.moveLeft();
+        do square5.moveLeft();
+        return;
+     }
+
+
+     method void moveRightStart() {
+
+        do square1.moveRightStart1(460,120);
+        do square2.moveRightStart1(465,110);
+        do square3.moveRightStart1(495,110);
+        do square4.moveRightStart1(465,170);
+        do square5.moveRightStart1(495,170);
+     return;
+  }
+
+
+  method Square getSquare1(){
+      return square1;
+  }
+
+
+}

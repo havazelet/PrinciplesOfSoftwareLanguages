@@ -1,0 +1,42 @@
+class Random {
+	static int x;
+
+	/*
+	Sets a new seed value.
+	*/
+	function void seed(int seed) {
+		let x = seed;
+		return;
+	}
+
+	/*
+	Returns a mod b. b must be positive.
+	*/
+	function int mod(int a, int b) {
+		var int left, mult, result;
+		let left = a / b;
+		let mult = left * b;
+		let result = a - mult;
+		return Math.abs(result);
+	}
+
+    
+	/*
+	Returns the next random number. Can be negative or positive.
+	*/
+	function int next() {
+		let x = 127 + (31*x) + (11*x*x);
+		return x;
+	}
+
+
+	/*
+	Returns a random value between x (inclusive) and y (non-inclusive).
+	y must be greater than x.
+	*/
+	function int between(int x, int y) {
+		var int diff;
+		let diff = y - x;
+		return Random.mod(Random.next(), diff) + x;
+	}
+}
